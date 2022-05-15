@@ -34,7 +34,7 @@ class DishDetail extends Component{
         }
         const comnts = comments.map(comment => {
             return (
-                <div className="col-15 col-md-14 m-8">
+                <div className="col-12 col-md-10 m-1">
                     <li key={comment.id}>
                         <p>{comment.comment}</p>
                         <p>-- {comment.author},
@@ -50,7 +50,7 @@ class DishDetail extends Component{
             )
         })
         return (
-            <div className="col-15 col-md-14 m-8">
+            <div className="col-14 col-md-13 m-1">
                 <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {comnts}
@@ -67,9 +67,9 @@ class DishDetail extends Component{
             const dishItem= this.renderDish(dish);
             const dishComment = this.renderComments(dish.comments);
             return (
-                <div className="row">
-                    <div className="col-12 col-sm-offset-8"> {dishItem} </div>
-                    <div className="col-sm-12 col-md-offset-0">{dishComment}</div> 
+                <div className="container">
+                    <div className="col-14 col-md-13 m-1"> {dishItem} </div>
+                    <div className="col-14 col-md-13 m-1">{dishComment}</div> 
                 </div>
             )
         }
