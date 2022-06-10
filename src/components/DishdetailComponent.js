@@ -1,16 +1,17 @@
 import React from 'react';
 
-import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 import {Link} from 'react-router-dom';
     
     
     function RenderDish({dish}){
+
         return(
             <div className='col-12 col-md-5 m-1'>
                 <Card>
                     
-                    <CardImg top src={dish.image} alt={dish.name} />
+                    <CardImg width="100%" top src={dish.image} alt={dish.name} />
                     <CardBody>
                         <CardTitle>{dish.name}</CardTitle>
                         <CardText>{dish.description}</CardText>
